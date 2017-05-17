@@ -113,6 +113,7 @@ module BulkInsert
     end
 
     def insert_sql_statement
+      raise adapter_name.inspect
       insert_ignore = if ignore
         if adapter_name == "MySQL"
           'IGNORE'
